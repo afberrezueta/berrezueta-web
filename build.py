@@ -6,6 +6,8 @@ SITE = "https://berrezuetainc.com"
 EMAIL = "contact@berrezuetainc.com"
 PHONE_HREF = "+17185025182"
 PHONE = "(718) 502-5182"
+# La misma dirección que se envió a Meta en la verificación del negocio.
+ADDRESS = "6 N Strathmore Street, Valley Stream, NY 11581, USA"
 UPDATED_ISO, UPDATED = "2026-10-16", "October 16, 2026"
 
 def head(title, desc, path, extra="", root=""):
@@ -49,7 +51,7 @@ def foot(current="", root=""):
         return f'<a href="{root}{slug}"{cur}>{label}</a>'
     return f"""<footer>
   <nav class="links" aria-label="Legal">{link("privacy", "Privacy policy")}{link("data-deletion", "Data deletion")}{link("terms", "Terms of service")}</nav>
-  <p class="meta"><span>© 2026 Berrezueta Inc.</span><span>Valley Stream, New York, USA</span><a href="mailto:{EMAIL}">{EMAIL}</a><a href="tel:{PHONE_HREF}">{PHONE}</a></p>
+  <p class="meta"><span>© 2026 Berrezueta Inc.</span><span>{ADDRESS}</span><a href="mailto:{EMAIL}">{EMAIL}</a><a href="tel:{PHONE_HREF}">{PHONE}</a></p>
 </footer>
 </div>
 </body>
@@ -64,11 +66,11 @@ def doc(title, slug, desc, body):
 </main>
 """ + foot(slug)
 
-CONTACT_P = f'<p>Berrezueta Inc., Valley Stream, New York, USA. Email <a href="mailto:{EMAIL}">{EMAIL}</a> or call <a href="tel:{PHONE_HREF}">{PHONE}</a>.</p>'
+CONTACT_P = f'<p>Berrezueta Inc., {ADDRESS}. Email <a href="mailto:{EMAIL}">{EMAIL}</a> or call <a href="tel:{PHONE_HREF}">{PHONE}</a>.</p>'
 
 JSONLD = f"""
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"Organization","@id":"{SITE}/#org","name":"Berrezueta Inc.","legalName":"Berrezueta Inc.","url":"{SITE}/","logo":"{SITE}/apple-touch-icon.png","email":"{EMAIL}","telephone":"+1-718-502-5182","address":{{"@type":"PostalAddress","addressLocality":"Valley Stream","addressRegion":"NY","addressCountry":"US"}},"contactPoint":{{"@type":"ContactPoint","contactType":"customer service","email":"{EMAIL}","telephone":"+1-718-502-5182","areaServed":"US","availableLanguage":["en","es"]}}}}
+{{"@context":"https://schema.org","@type":"Organization","@id":"{SITE}/#org","name":"Berrezueta Inc.","legalName":"Berrezueta Inc.","url":"{SITE}/","logo":"{SITE}/apple-touch-icon.png","email":"{EMAIL}","telephone":"+1-718-502-5182","address":{{"@type":"PostalAddress","streetAddress":"6 N Strathmore Street","postalCode":"11581","addressLocality":"Valley Stream","addressRegion":"NY","addressCountry":"US"}},"contactPoint":{{"@type":"ContactPoint","contactType":"customer service","email":"{EMAIL}","telephone":"+1-718-502-5182","areaServed":"US","availableLanguage":["en","es"]}}}}
 </script>"""
 
 INDEX = head("Berrezueta Inc. — E-commerce and technology, Valley Stream, NY",
@@ -102,7 +104,7 @@ INDEX = head("Berrezueta Inc. — E-commerce and technology, Valley Stream, NY",
       <dt>Company</dt><dd>Berrezueta Inc., New York</dd>
       <dt>Email</dt><dd><a href="mailto:{EMAIL}">{EMAIL}</a></dd>
       <dt>Phone</dt><dd><a href="tel:{PHONE_HREF}">{PHONE}</a></dd>
-      <dt>Location</dt><dd>Valley Stream, New York, USA</dd>
+      <dt>Address</dt><dd>{ADDRESS}</dd>
     </dl>
   </section>
 </main>
