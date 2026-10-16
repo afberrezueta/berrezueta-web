@@ -3,7 +3,7 @@
 from pathlib import Path
 
 SITE = "https://berrezuetainc.com"
-EMAIL = "berrezuetainc@gmail.com"
+EMAIL = "contact@berrezuetainc.com"
 PHONE_HREF = "+17185025182"
 PHONE = "(718) 502-5182"
 UPDATED_ISO, UPDATED = "2026-10-16", "October 16, 2026"
