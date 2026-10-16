@@ -101,3 +101,4 @@ footer .meta a { color: var(--slate); }
   dl.contact { grid-template-columns: 1fr; gap: 0.1rem; }
   dl.contact dd { margin-bottom: 0.75rem; }
 }
+.two p.product { margin-top: 0.75rem; color: var(--slate); }

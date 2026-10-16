@@ -91,6 +91,7 @@ INDEX = head("Berrezueta Inc. — E-commerce and technology, Valley Stream, NY",
       <div>
         <h3>Technology</h3>
         <p>We build software and AI tools for research, content and operations, including assistants that customers and staff can reach on WhatsApp.</p>
+        <p class="product">Our product <a href="https://www.deltalyn.com/">Deltalyn</a> publishes daily scenarios for US stocks and crypto, with a public, auto-graded record of every call. It provides general information, not personalized financial advice.</p>
       </div>
     </div>
   </section>
